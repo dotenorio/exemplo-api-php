@@ -1,16 +1,14 @@
 <?php
-  $dir = 'funcoes/';
+  $dir = 'rotas';
 
   if ($handle = opendir($dir)) {
-    echo "<h1>Funções:</h1>";
-
+    echo "<h1>Rotas:</h1>";
     echo "<ul>";
-    while (false !== ($file = readdir($handle))) {
-      if ($file !== '.' && $file !== '..') {
-        echo "<li><a href='$dir$file'>$file</a></li>";
-      }
-    }
-    echo "<ul>";
+    echo "  <li>rotas/excluir.php</li>";
+    echo "  <li>rotas/ler.php</li>";
+    echo "  <li>rotas/atualizar.php</li>";
+    echo "  <li>rotas/criar.php</li>";
+    echo "</ul>";
 
     closedir($handle);
   }
